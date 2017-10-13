@@ -11,6 +11,7 @@ export interface ParticlesProps{
 	style: any;
 	className?: string;
 	canvasClassName?: string;
+	children?: Element[];
 }
 
 export interface ParticlesState{
@@ -75,6 +76,7 @@ export default class Particles extends PureComponent<ParticlesProps, ParticlesSt
 					})
 				}>
 				</canvas>
+				{this.props.children}
 			</div>
 		);
 	}
